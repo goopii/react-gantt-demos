@@ -1,3 +1,7 @@
+# Demos of SVAR Gantt for React
+
+This repository contains the code for of [the working examples](https://docs.svar.dev/react/gantt/samples/#/base/willow) of [SVAR Gantt for React](https://svar.dev/react/gantt/), a ready-to-use Gantt chart component that is easily integrates with React applications.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
