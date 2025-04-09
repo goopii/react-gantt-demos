@@ -1,15 +1,16 @@
+import MINE from "./cases/_MINE.jsx";
 import BasicInit from "./cases/BasicInit.jsx";
 import GanttProvider from "./cases/GanttProvider.jsx";
 import GanttBatchProvider from "./cases/GanttBatchProvider.jsx";
 import GanttBackend from "./cases/GanttBackend.jsx";
-import GanttScales from "./cases/GanttScales.jsx";
+import GanttScales from "./cases/_GanttScales.jsx";
 import GanttGrid from "./cases/GanttGrid.jsx";
 import GanttNoGrid from "./cases/GanttNoGrid.jsx";
 import GanttFixedColumns from "./cases/GanttFixedColumns.jsx";
 import GanttFlexColumns from "./cases/GanttFlexColumns.jsx";
-import GanttReadOnly from "./cases/GanttReadOnly.jsx";
+import GanttReadOnly from "./cases/_GanttReadOnly.jsx";
 import GanttPreventActions from "./cases/GanttPreventActions.jsx";
-import GanttFormControls from "./cases/GanttFormControls.jsx";
+import GanttFormControls from "./cases/_GanttFormControls.jsx";
 import GanttSizes from "./cases/GanttSizes.jsx";
 import GanttMultiple from "./cases/GanttMultiple.jsx";
 import GanttPerformance from "./cases/GanttPerformance.jsx";
@@ -19,7 +20,7 @@ import GanttToolbarButtons from "./cases/GanttToolbarButtons.jsx";
 import GanttText from "./cases/GanttText.jsx";
 import GanttZoom from "./cases/GanttZoom.jsx";
 import GanttCustomZoom from "./cases/GanttCustomZoom.jsx";
-import GanttLengthUnit from "./cases/GanttLengthUnit.jsx";
+import GanttLengthUnit from "./cases/_GanttLengthUnit.jsx";
 import GanttTaskTypes from "./cases/GanttTaskTypes.jsx";
 import GanttBaseline from "./cases/GanttBaseline.jsx";
 import ChartCellBorders from "./cases/ChartBorders.jsx";
@@ -33,75 +34,59 @@ import GanttSummariesNoDrag from "./cases/GanttSummariesNoDrag.jsx";
 import GanttSummariesConvert from "./cases/GanttSummariesConvert.jsx";
 
 export const links = [
-	["/base/:skin", "Basic Gantt", BasicInit],
+  ["/MINE/:skin", "MINE", MINE],
+  ["/base/:skin", "Basic Gantt", BasicInit],
 
-	["/sizes/:skin", "Scale / cell sizes", GanttSizes],
-	["/cell-borders/:skin", "Chart cell borders", ChartCellBorders],
-	["/scales/:skin", "Custom scales", GanttScales],
+  ["/sizes/:skin", "Scale / cell sizes", GanttSizes],
+  ["/cell-borders/:skin", "Chart cell borders", ChartCellBorders],
+  ["/scales/:skin", "Custom scales", GanttScales],
 
-	
-	["/baseline/:skin", "Baselines", GanttBaseline],
-	["/templates/:skin", "Custom text", GanttText],
+  ["/baseline/:skin", "Baselines", GanttBaseline],
+  ["/templates/:skin", "Custom text", GanttText],
 
-	["/task-types/:skin", "Task types", GanttTaskTypes],
-	[
-		"/summary-progress/:skin",
-		"Summary tasks with auto progress",
-		GanttSummariesProgress,
-	],
-	[
-		"/summary-no-drag/:skin",
-		"No drag for summary tasks",
-		GanttSummariesNoDrag,
-	],
-	[
-		"/summary-convert/:skin",
-		"Auto convert to summary tasks",
-		GanttSummariesConvert,
-	],
+  ["/task-types/:skin", "Task types", GanttTaskTypes],
+  [
+    "/summary-progress/:skin",
+    "Summary tasks with auto progress",
+    GanttSummariesProgress,
+  ],
+  ["/summary-no-drag/:skin", "No drag for summary tasks", GanttSummariesNoDrag],
+  [
+    "/summary-convert/:skin",
+    "Auto convert to summary tasks",
+    GanttSummariesConvert,
+  ],
 
-	["/zoom/:skin", "Zoom", GanttZoom],
-	["/custom-zoom/:skin", "Custom Zoom", GanttCustomZoom],
-	["/length-unit/:skin", "Length unit (rounding)", GanttLengthUnit],
+  ["/zoom/:skin", "Zoom", GanttZoom],
+  ["/custom-zoom/:skin", "Custom Zoom", GanttCustomZoom],
+  ["/length-unit/:skin", "Length unit (rounding)", GanttLengthUnit],
 
-	["/no-grid/:skin", "No grid", GanttNoGrid],
-	[
-		"/grid-fill-space-columns/:skin",
-		"Flexible grid columns",
-		GanttFlexColumns,
-	],
-	["/grid-fixed-columns/:skin", "Fixed grid columns", GanttFixedColumns],
-	["/grid-custom-columns/:skin", "Custom grid columns", GanttGrid],
+  ["/no-grid/:skin", "No grid", GanttNoGrid],
+  ["/grid-fill-space-columns/:skin", "Flexible grid columns", GanttFlexColumns],
+  ["/grid-fixed-columns/:skin", "Fixed grid columns", GanttFixedColumns],
+  ["/grid-custom-columns/:skin", "Custom grid columns", GanttGrid],
 
-	["/toolbar/:skin", "Toolbar", GanttToolbar],
-	["/toolbar-buttons/:skin", "Toolbar: limited buttons", GanttToolbarButtons],
-	["/context-menu/:skin", "Context menu", ContextMenu],
-	[
-		"/menu-handler/:skin",
-		"Context menu: limiting options",
-		ContextMenuHandler,
-	],
-	["/menu-options/:skin", "Context menu: custom options", ContextMenuOptions],
-	[
-		"/custom-form-controls/:skin",
-		"Editor: custom controls",
-		GanttFormControls,
-	],
+  ["/toolbar/:skin", "Toolbar", GanttToolbar],
+  ["/toolbar-buttons/:skin", "Toolbar: limited buttons", GanttToolbarButtons],
+  ["/context-menu/:skin", "Context menu", ContextMenu],
+  ["/menu-handler/:skin", "Context menu: limiting options", ContextMenuHandler],
+  ["/menu-options/:skin", "Context menu: custom options", ContextMenuOptions],
+  ["/custom-form-controls/:skin", "Editor: custom controls", GanttFormControls],
 
-	["/readonly/:skin", "Readonly mode", GanttReadOnly],
+  ["/readonly/:skin", "Readonly mode", GanttReadOnly],
 
-	["/prevent-actions/:skin", "Preventing actions", GanttPreventActions],
-	["/gantt-multiple/:skin", "Many Gantts per page", GanttMultiple],
-	["/performance/:skin", "Performance", GanttPerformance],
+  ["/prevent-actions/:skin", "Preventing actions", GanttPreventActions],
+  ["/gantt-multiple/:skin", "Many Gantts per page", GanttMultiple],
+  ["/performance/:skin", "Performance", GanttPerformance],
 
-	["/sorting/:skin", "Custom sorting", GanttSort],
-	["/sorting-api/:skin", "Sort by API", GanttCustomSort],
+  ["/sorting/:skin", "Custom sorting", GanttSort],
+  ["/sorting-api/:skin", "Sort by API", GanttCustomSort],
 
-	["/backend/:skin", "Backend data", GanttBackend],
-	["/backend-provider/:skin", "Saving to backend", GanttProvider],
-	[
-		"/backend-provider-batch/:skin",
-		"Saving to backend (batch)",
-		GanttBatchProvider,
-	],
+  ["/backend/:skin", "Backend data", GanttBackend],
+  ["/backend-provider/:skin", "Saving to backend", GanttProvider],
+  [
+    "/backend-provider-batch/:skin",
+    "Saving to backend (batch)",
+    GanttBatchProvider,
+  ],
 ];

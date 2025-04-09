@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { getData, bigScales } from "../data";
+import { getData, bigScales } from "../data.js";
 import { Gantt } from "wx-react-gantt";
 import { Select } from "../ui.js";
 
